@@ -3,9 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UJ May Assesssment CV</title>
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h5, h6 {
+            color: #0d47a1;
+        }
+        p, li {
+            color: #424242;
+        }
+        img.circle {
+            border-radius: 50%;
+            width: 150px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div id="app"></div>
+
+    <!-- Handlebars template -->
+    <script id="cv-template" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <img src="{{user.photo}}" alt="Profile Picture" class="circle">
+                </div>
+                <div class="col s12 m8">
+                    <h1>{{user.fullName}}</h1>
+                    <p><strong>Phone:</strong> {{details.phone}}</p>
+                    <p><strong>Email:</strong> <a href="mailto:{{details.email}}">{{details.email}}</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://{{details.linkedIn}}">{{details.linkedIn}}</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5>Professional Summary</h5>
+                    <p>{{about.professionalSummary}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5>Soft Skills</h5>
+                    <ul>
+                        {{#each skills.soft-skills}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Technical Skills</h5>
+                    <ul>
+                        {{#each skills.technical-skills}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5>Education</h5>
+                    <p><img src="{{education.photo}}" alt="Institution Logo" style="width: 100px;"> {{education.institutionName}}</p>
+                    <p>{{education.description}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5>Foreign Language: {{foreignLanguage.language}}</h5>
+                    <ul>
+                        {{#each foreignLanguage.phrases}}
+                            <li><strong>{{englishPhrase}}:</strong> {{foreignLanguage}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5>Favourite Subjects</h5>
+                    {{#each favouriteSubjects}}
+                        <h6>{{name}}</h6>
+                        <p>{{description}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </script>
+     <!-- Include Handlebars from CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             // Fetch the data from data.json
+             fetch('data.json')
+                 .then(response => response.json())
+                 .then(data => {
+                     // Get the Handlebars template
+                     const templateSource = document.getElementById('cv-template').innerHTML;
+                     const template = Handlebars.compile(templateSource);
+                     // Generate the HTML and set it to the app element
+                     document.getElementById('app').innerHTML = template(data);
+                 })
+                 .catch(error => console.error('Error fetching the data:', error));
+         });
+     </script>
+
+    
 </body>
 </html>

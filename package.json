@@ -1,7 +1,7 @@
 {
   "name": "uj-may-assessment",
   "version": "1.0.0",
-  "description": "",
+  "description": "A siple CV using HTML, CSS and Handlebars",
   "main": "index.js",
   "type": "module",
   "license": "AGPL-version-3.0",
