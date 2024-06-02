@@ -1,38 +1,60 @@
 {
-    "user" : {
-        "fullName" : "",
-        "photo" : "",
-        "phone" : "",
-        "email" : ""
+    "user": {
+        "fullName": "Oratile Mogwera",
+        "photo": "PicO.png"
     },
-    "education" : {
-        "institutionName" : "",
-        "photo" : "",
-        "description" : ""
+    "details": {
+        "phone": "073 799 5955",
+        "email": "preciousmogweraoratile@gmail.com",
+        "linkedIn": "www.linkedin.com/in/oratile-mogwera-248743235"
     },
-    "foreignLanguage" : {
-        "language" : "",
-        "phrases" : [{
-            "englishPhrase" : "",
-            "foreignLanguage" : ""
+    "about": {
+        "professionalSummary": "I am a recent honours graduate in the field of Information Intelligence. During my academic career, I have gained impeccable presentation skills as I was honoured to represent UJ at the University of Namibia delivering the College of Business and Economics Project. Despite my two majors in Information Management and Business Management, I am doing a short course in PowerBI and my current interests have led me to Software Development which is facilitated by UJ & Accenture. My ultimate goal is to venture into the tech space, I aspire to engineer, manage and protect digital systems."
+    },
+    "skills": {
+        "soft-skills": [
+            "Communication",
+            "Presentation skills"
+        ],
+        "technical-skills": [
+            "Data analysis",
+            "Database management",
+            "PowerBI Dashboards",
+            "Agile Methodologies",
+            "Systems thinking",
+            "Information Management"
+        ]
+    },
+    "education": {
+        "institutionName": "University of Johannesburg",
+        "photo": "uj logo.jpg",
+        "description": "BCom Hons in Information Management"
+    },
+    "foreignLanguage": {
+        "language": "Afrikaans",
+        "phrases": [
+            {
+                "englishPhrase": "Education is the key to success",
+                "foreignLanguage": "Onderwys is die sleutel tot sukses"
+            },
+            {
+                "englishPhrase": "Continuous learning aids personal development",
+                "foreignLanguage": "Deurlopende leerhulpmiddels vir persoonlike ontwikkeling"
+            }
+        ]
+    },
+    "favouriteSubjects": [
+        {
+            "name": "Business Intelligence",
+            "description": "This module shaped and inspired my perspective regarding my career path. It involves content that explains how organizations can use intelligence and digital systems to stay competitive and create simple and modern business systems."
         },
         {
-            "englishPhrase" : "",
-            "foreignLanguage" : ""
-        }]
-    },
-    "favouriteSubjects" : [
-        {
-            "name" : "",
-            "description" : ""
+            "name": "Competitive Intelligence",
+            "description": "I enjoyed this module because it focuses significantly on using technology to stay competitive. I enjoyed it because it was relevant, it encouraged innovation and staying relevant in a competitive market or industry."
         },
         {
-            "name" : "",
-            "description" : ""
-        },
-        {
-            "name" : "",
-            "description" : ""
+            "name": "Information Management",
+            "description": "This module involves the management of data and information and how they can be used to make analysis and decisions that impact the business positively."
         }
     ]
 }
