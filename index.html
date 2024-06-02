@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oratile Mogwera's CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div id="app"></div>
+
+    <!-- Handlebars template -->
+    <script id="cv-template" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-pic">
+                    <img src="{{user.photo}}" alt="Profile Picture" class="circle">
+                </div>
+                <div class="profile-info">
+                    <h1>{{user.fullName}}</h1>
+                    <p><strong>Phone:</strong> {{details.phone}}</p>
+                    <p><strong>Email:</strong> <a href="mailto:{{details.email}}">{{details.email}}</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://{{details.linkedIn}}">{{details.linkedIn}}</a></p>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Professional Summary</h5>
+                <p>{{about.professionalSummary}}</p>
+            </div>
+            <div class="section">
+                <div class="skills">
+                    <h5>Soft Skills</h5>
+                    <ul>
+                        {{#each skills.soft-skills}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h5>Technical Skills</h5>
+                    <ul>
+                        {{#each skills.technical-skills}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Education</h5>
+                <div class="education">
+                    <img src="{{education.photo}}" alt="Institution Logo" class="institution-logo">
+                    <div>
+                        <p>{{education.institutionName}}</p>
+                        <p>{{education.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Foreign Language: {{foreignLanguage.language}}</h5>
+                <ul>
+                    {{#each foreignLanguage.phrases}}
+                        <li><strong>{{englishPhrase}}:</strong> {{foreignLanguage}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="section">
+                <h5>Favourite Subjects</h5>
+                {{#each favouriteSubjects}}
+                    <div class="subject">
+                        <h6>{{name}}</h6>
+                        <p>{{description}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <!-- Include Handlebars from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch the data from data.json
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Get the Handlebars template
+                    const templateSource = document.getElementById('cv-template').innerHTML;
+                    const template = Handlebars.compile(templateSource);
+                    // Generate the HTML and set it to the app element
+                    document.getElementById('app').innerHTML = template(data);
+                })
+                .catch(error => console.error('Error fetching the data:', error));
+        });
+    </script>
 </body>
 </html>
