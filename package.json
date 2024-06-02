@@ -1,4 +1,7 @@
+cat > package.json << EOL
+
 {
+
   "name": "uj-may-assessment",
   "version": "1.0.0",
   "description": "A siple CV using HTML, CSS and Handlebars",

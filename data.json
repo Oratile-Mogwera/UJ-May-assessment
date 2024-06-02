@@ -1,15 +1,15 @@
 {
     "user": {
         "fullName": "Oratile Mogwera",
-        "photo": "PicO.png",
+        "photo": "PicO.png"
     },
     "details": {
         "phone": "073 799 5955",
-        "email": "preciousmogweraoratile@gmai",
+        "email": "preciousmogweraoratile@gmail.com",
         "linkedIn": "www.linkedin.com/in/oratile-mogwera-248743235"
     },
     "about": {
-        "professionalSummary": "I am a recent honours graduate in the field of Information Intelligence. Durig my academic career, I have gained empaccable prenstation skills as I was honoured to reperent UJ at the University of Namibia delevring the College of Business and Economics Project on business development. Despite my two majors in Information Management and Business Management, I am doing a short course in PowerBI. My current interests has led to me to Software Development which is facilitated by Uj & Acenture. My ultimate goal is to venture into the tech space, I aspire to engineer, mage and protect digital systems."
+        "professionalSummary": "I am a recent honours graduate in the field of Information Intelligence. During my academic career, I have gained impeccable presentation skills as I was honoured to represent UJ at the University of Namibia delivering the College of Business and Economics Project. Despite my two majors in Information Management and Business Management, I am doing a short course in PowerBI and my current interests have led me to Software Development which is facilitated by UJ & Accenture. My ultimate goal is to venture into the tech space, I aspire to engineer, manage and protect digital systems."
     },
     "skills": {
         "soft-skills": [
@@ -20,7 +20,7 @@
             "Data analysis",
             "Database management",
             "PowerBI Dashboards",
-            "Agile Methodolgies",
+            "Agile Methodologies",
             "Systems thinking",
             "Information Management"
         ]
@@ -38,7 +38,7 @@
                 "foreignLanguage": "Onderwys is die sleutel tot sukses"
             },
             {
-                "englishPhrase": "Continous learning aids personal development",
+                "englishPhrase": "Continuous learning aids personal development",
                 "foreignLanguage": "Deurlopende leerhulpmiddels vir persoonlike ontwikkeling"
             }
         ]
@@ -46,15 +46,15 @@
     "favouriteSubjects": [
         {
             "name": "Business Intelligence",
-            "description": "This module shaped and inpsired my perpective regarding my career path. It involves content that explains how organisations can use intellegnce and digital systems to stay competitve and create simple and mordern business systems."
+            "description": "This module shaped and inspired my perspective regarding my career path. It involves content that explains how organizations can use intelligence and digital systems to stay competitive and create simple and modern business systems."
         },
         {
             "name": "Competitive Intelligence",
-            "description": "I enjoyed this module because it focues significantly of the using technology to staty competeitive. I enjoyed it becuase it wwas relevant, it encoraged innovation and staying relevant in a cometetive market or industry. "
+            "description": "I enjoyed this module because it focuses significantly on using technology to stay competitive. I enjoyed it because it was relevant, it encouraged innovation and staying relevant in a competitive market or industry."
         },
         {
             "name": "Information Management",
-            "description": "This module invloves the managgent of data and information and how they can  be used to make analysis and decisions that impact the business positively. "
+            "description": "This module involves the management of data and information and how they can be used to make analysis and decisions that impact the business positively."
         }
     ]
 }
