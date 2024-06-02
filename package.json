@@ -1,5 +1,3 @@
-cat > package.json << EOL
-
 {
 
   "name": "uj-may-assessment",
@@ -13,7 +11,7 @@ cat > package.json << EOL
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"
   },
-  "homepage": "",
+  "homepage": "CV",
   "repository": {
     "type": "git",
     "url": ""
@@ -21,8 +19,8 @@ cat > package.json << EOL
   "bugs": "",
   "keywords": [],
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Oratile",
+    "email": "preciousmogweraoratile@gmail.com",
     "url": ""
   },
   "contributors": [],
