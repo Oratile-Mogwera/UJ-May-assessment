@@ -25,6 +25,7 @@
             "Information Management"
         ]
     },
+    
     "education": {
         "institutionName": "University of Johannesburg",
         "photo": "uj logo.jpg",
@@ -43,14 +44,17 @@
             }
         ]
     },
+    
     "favouriteSubjects": [
         {
             "name": "Business Intelligence",
             "description": "This module shaped and inspired my perspective regarding my career path. It involves content that explains how organizations can use intelligence and digital systems to stay competitive and create simple and modern business systems."
+           
         },
         {
             "name": "Competitive Intelligence",
             "description": "I enjoyed this module because it focuses significantly on using technology to stay competitive. I enjoyed it because it was relevant, it encouraged innovation and staying relevant in a competitive market or industry."
+            
         },
         {
             "name": "Information Management",
@@ -58,3 +62,4 @@
         }
     ]
 }
+
