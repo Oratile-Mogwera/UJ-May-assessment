@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oratile Mogwera's CV</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-DYo7j8hn.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Handlebars template -->
+    <script id="cv-template" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-pic">
+                    <img src="PicO.png" alt="Profile Picture" class="circle">
+                </div>
+                <div class="profile-info">
+                    <h1>Oratile Mogwera</h1>
+                    <p><strong>Phone:</strong> 073 799 5955</p>
+                    <p><strong>Email:</strong> <a href="mailto:preciousmogweraoratile@gmail.com">preciousmogweraoratile@gmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oratile-mogwera-248743235">www.linkedin.com/in/oratile-mogwera-248743235</a></p>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Professional Summary</h5>
+                <p>I am a recent honours graduate in the field of Information Intelligence. During my academic career, I have gained impeccable presentation skills as I was honoured to represent UJ at the University of Namibia delivering the College of Business and Economics Project. Despite my two majors in Information Management and Business Management, I am doing a short course in PowerBI and my current interests have led me to Software Development which is facilitated by UJ &amp; Accenture. My ultimate goal is to venture into the tech space, I aspire to engineer, manage and protect digital systems.</p>
+            </div>
+            <div class="section">
+                <div class="skills">
+                    <h5>Soft Skills</h5>
+                    <ul>
+                            <li>Communication</li>
+                            <li>Presentation skills</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h5>Technical Skills</h5>
+                    <ul>
+                            <li>Data analysis</li>
+                            <li>Database management</li>
+                            <li>PowerBI Dashboards</li>
+                            <li>Agile Methodologies</li>
+                            <li>Systems thinking</li>
+                            <li>Information Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Education</h5>
+                <div class="education">
+                    <img src="uj logo.jpg" alt="Institution Logo" class="institution-logo">
+                    <div>
+                        <p>University of Johannesburg</p>
+                        <p>BCom Hons in Information Management</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h5>Foreign Language: Afrikaans</h5>
+                <ul>
+                        <li><strong>Education is the key to success:</strong> Onderwys is die sleutel tot sukses</li>
+                        <li><strong>Continuous learning aids personal development:</strong> Deurlopende leerhulpmiddels vir persoonlike ontwikkeling</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h5>Favourite Subjects</h5>
+                    <div class="subject">
+                        <h6>Business Intelligence</h6>
+                        <p>This module shaped and inspired my perspective regarding my career path. It involves content that explains how organizations can use intelligence and digital systems to stay competitive and create simple and modern business systems.</p>
+                    </div>
+                    <div class="subject">
+                        <h6>Competitive Intelligence</h6>
+                        <p>I enjoyed this module because it focuses significantly on using technology to stay competitive. I enjoyed it because it was relevant, it encouraged innovation and staying relevant in a competitive market or industry.</p>
+                    </div>
+                    <div class="subject">
+                        <h6>Information Management</h6>
+                        <p>This module involves the management of data and information and how they can be used to make analysis and decisions that impact the business positively.</p>
+                    </div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Include Handlebars from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch the data from data.json
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Get the Handlebars template
+                    const templateSource = document.getElementById('cv-template').innerHTML;
+                    const template = Handlebars.compile(templateSource);
+                    // Generate the HTML and set it to the app element
+                    document.getElementById('app').innerHTML = template(data);
+                })
+                .catch(error => console.error('Error fetching the data:', error));
+        });
+    </script>
+</body>
+</html>
+
