@@ -3,7 +3,7 @@
   "name": "uj-may-assessment",
   "version": "1.0.0",
   "description": "A siple CV using HTML, CSS and Handlebars",
-  "description": "A siple CV using HTML, CSS and Handlebars",
+  
   "main": "index.js",
   "type": "module",
   "license": "AGPL-version-3.0",
@@ -13,7 +13,7 @@
     "npm": ">= 6.0.0"
   },
   "homepage": "CV",
-  "homepage": "CV",
+  
   "repository": {
     "type": "git",
     "url": ""
@@ -21,8 +21,6 @@
   "bugs": "",
   "keywords": [],
   "author": {
-    "name": "Oratile",
-    "email": "preciousmogweraoratile@gmail.com",
     "name": "Oratile",
     "email": "preciousmogweraoratile@gmail.com",
     "url": ""
