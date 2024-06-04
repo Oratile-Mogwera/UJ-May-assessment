@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="app"></div>
-    <script id="cv-template" type="text/x-handlebars-template">
         <div class="container">
             <div class="profile-header">
                 <div class="profile-pic">
@@ -73,45 +71,6 @@
                 {{/each}}
             </div>
         </div>
-    </script>
-
-    <!-- Include Handlebars from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Fetch the data from data.json
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    // Get the Handlebars template
-                    const templateSource = document.getElementById('cv-template').innerHTML;
-                    const template = Handlebars.compile(templateSource);
-                    // Generate the HTML and set it to the app element
-                    document.getElementById('app').innerHTML = template(data);
-                })
-                .catch(error => console.error('Error fetching the data:', error));
-        });
-    </script>
-    <div id="app"></div>
-
-
-    <!-- Include Handlebars from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Fetch the data from data.json
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    // Get the Handlebars template
-                    const templateSource = document.getElementById('cv-template').innerHTML;
-                    const template = Handlebars.compile(templateSource);
-                    // Generate the HTML and set it to the app element
-                    document.getElementById('app').innerHTML = template(data);
-                })
-                .catch(error => console.error('Error fetching the data:', error));
-        });
-    </script>
 </body>
 </html>
 
